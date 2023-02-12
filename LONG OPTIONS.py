@@ -1,40 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[2]:
-
-
-import numpy as np
-import matplotlib.pyplot as plt
-
-# Define the strike price and premium
-K = 90
-premium = 5
-
-# Generate the stock price range from 0 to 150 at intervals of 1
-S = np.arange(0, 151, 1)
-
-# Calculate the profit/loss for the option holder
-payoff = np.maximum(S - K, 0) - premium
-
-# Plot the graph of profit/loss against stock price
-plt.plot(S, payoff)
-plt.xlabel('Stock Price')
-plt.ylabel('Profit/Loss')
-plt.title('European Call Option Payoff')
-plt.grid()
-plt.show()
-
-
-# In[3]:
-
-
-
-
-
-# In[28]:
-
-
+## CALL OPTION PLOT K = 80 ##
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -52,7 +19,7 @@ payoff = np.maximum(S - K, 0) - premium
 plt.plot(S, payoff)
 plt.xlabel('Stock Price')
 plt.ylabel('Profit/Loss')
-plt.title('European Call Option Payoff')
+plt.title('Long Call Option Payoff')
 plt.grid()
 
 # Set the x-axis range to include the strike price
@@ -70,7 +37,7 @@ plt.ylim(-10, 100)
 plt.show()
 
 
-# In[31]:
+### LONG CALL OPTION WITH LOWER STRIKE K = 60 ###
 
 
 import numpy as np
@@ -109,7 +76,7 @@ plt.ylim(-20, 100)
 plt.show()
 
 
-# In[10]:
+##LONG PUT OPTION WITH K = 80###
 
 
 import numpy as np
@@ -148,7 +115,7 @@ plt.ylim(-20, 100)
 plt.show()
 
 
-# In[13]:
+###LONG PUT OPTION WITH K=100###
 
 
 import numpy as np
@@ -187,10 +154,8 @@ plt.ylim(-20, 100)
 plt.show()
 
 
-# In[115]:
 
-
-### CALL OPTION PRICE VS STRIKE ####
+### RELATIONSHIP BETWEEN LONG CALL OPTION PRICE AND STRIKE ####
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.stats import norm
@@ -218,10 +183,8 @@ plt.title("Call Option Price vs. Strike Price")
 plt.show()
 
 
-# In[79]:
 
-
-### CALL OPTION PRICE VS VOLA ####
+### RELATIONSHIP BETWEEN LONG CALL OPTION PRICE VS VOLA ####
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.stats import norm
@@ -247,10 +210,8 @@ plt.title("Call option Price vs. Volatility")
 plt.show()
 
 
-# In[111]:
 
-
-### call OPTION PRICE VS TIME ####
+### RELATIONSHIP BETWEEN LONG Call OPTION PRICE VS TIME ####
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.stats import norm
@@ -276,16 +237,11 @@ plt.title("Call option Price vs. Time")
 plt.show()
 
 
-# In[94]:
-
-
-
-
 
 # In[114]:
 
 
-##CALL OPTION VS  INTEREST RATES##
+## RELANTIONSHIP BETWEEN LONG CALL OPTION VS  INTEREST RATES##
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.stats import norm
@@ -311,10 +267,7 @@ plt.title("Call Option Price vs. Interest Rates")
 plt.show()
 
 
-# In[100]:
-
-
-###PUT OPTION VS STRIKE PRICE###
+###RELANTIONSHIP BETWEEN LONG PUT OPTION VS STRIKE PRICE###
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.stats import norm
@@ -340,10 +293,8 @@ plt.title("Long Put Option Price vs. Strike Price")
 plt.show()
 
 
-# In[108]:
 
-
-###PUT OPTION VS VOLATILITY###
+### RELANTIONSHIP BETWEEN LONG PUT OPTION VS VOLATILITY###
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.stats import norm
@@ -372,8 +323,7 @@ plt.show()
 # In[116]:
 
 
-##PUT OPTION VS TIME##
-###PUT OPTION VS VOLATILITY###
+##RELANTIONSHIP BETWEEN LONG PUT OPTION VS TIME##
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.stats import norm
